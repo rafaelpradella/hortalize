@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'pt';
+  src: url('pt_sans-web-bold.woff2') format('woff2'), url('pt_sans-web-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pt';
+  src: url('pt_sans-web-regular.woff2') format('woff2'), url('pt_sans-web-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.regular {
+  font-family: 'pt';
+  font-weight: regular;
+}
+.bold {
+  font-family: 'pt';
+  font-weight: bold;
+}
+.transition {
+  transition: all .2s ease;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.button {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body,
+html {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: #00e;
+  text-decoration: none;
+  border: 0;
+  border-color: transparent;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.app-wrapper {
+  display: block;
+  height: auto;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  overflow: hidden;
+}
+body {
+  background-color: #FFFFFF;
+  font-family: 'pt';
+  font-weight: regular;
+}
+h1 {
+  font-family: 'pt';
+  font-weight: bold;
+  color: #323232;
+  font-size: 2.2rem;
+  margin: 20px;
+  text-transform: uppercase;
+}
+p {
+  font-family: sans-serif;
+  margin-bottom: 40px;
+  color: #323232;
+  line-height: 175%;
+  padding: 0 15px;
+}
+.tbar {
+  background-color: #F6F6F6;
+  background-image: url("../img/bg.png");
+  background-size: 240px;
+  color: #6C6C6C;
+  display: block;
+  padding: 20px;
+  width: 100%;
+  height: 110px;
+  z-index: 30;
+}
+.tbar .tbar-view {
+  font-family: 'pt';
+  font-weight: bold;
+  display: inline-block;
+  font-size: 2.5em;
+  margin-top: 39px;
+  width: 80%;
+}
+.tbar .tbar-view-selector {
+  display: inline-block;
+}
+.tbar .tbar-view-item {
+  border-bottom: 5px solid #323232;
+  color: #323232;
+}
+.soil-container {
+  background-color: #B18050;
+  height: 210px;
+  border-top: 9px solid #8e6740;
+  padding: 10px 40px 10px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+}
+.soil-container .soil-info {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+.soil-container .soil-info-container {
+  float: left;
+  padding-top: 75px;
+  text-align: center;
+  width: 49%;
+}
+.soil-container .soil-info-container:first-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+.soil-container .soil-info-type {
+  font-family: 'pt';
+  font-weight: bold;
+  color: #6F301F;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.soil-container .soil-info-value {
+  color: #FFFFFF;
+  font-size: 80px;
+  letter-spacing: -4.5px;
+  line-height: 110%;
+  margin-left: -25px;
+  position: relative;
+}
+.soil-container .soil-info-value small {
+  font-size: 20px;
+  letter-spacing: -1.25px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+}
+.soil-container .soil-reservatory {
+  background-color: #C7D8F2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 20px;
+  height: 100%;
+}
+.soil-container .soil-reservatory-level {
+  background-color: #96BFFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
