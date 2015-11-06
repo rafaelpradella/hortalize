@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Rock as Nove",
+  "launch_path": "/index.html",
+  "description": "A segunda tela do programa Rock as Nove",
+  "icons": {
+    "60": "/img/touch/touch-icon-60x60.png",
+    "128": "/img/touch/touch-icon-128x128.png"
+  },
+  "developer": {
+    "name": "Rock as Nove - 4DESDIMA",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "pt-br",
+  "permissions": {
+  },
+  "locales": {
+    "pt-br": {
+      "name": "Rock as Nove",
+      "description": "A segunda tela do programa Rock as Nove"
+    }
+  }
+}
