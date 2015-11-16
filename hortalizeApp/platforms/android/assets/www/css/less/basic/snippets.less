@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'pt';
+    src: url('pt_sans-web-bold.woff2') format('woff2'),
+         url('pt_sans-web-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pt';
+    src: url('pt_sans-web-regular.woff2') format('woff2'),
+         url('pt_sans-web-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// VARIABLES
+	@darkGray : #323232;
+    @gray: #6C6C6C;
+	@lightGray : #F6F6F6;
+	@white : #FFFFFF;
+
+    @lightGreen:#CCEF7D;
+    @green:#5B9E29;
+    @darkGreen:#3A661A;
+
+    @lightBrown:#CB8A4B;
+    @brown:#B18050;
+    @darkBrown:#6F301F;
+    
+    @blue:#96BFFF;
+    @lightBlue:#C7D8F2;
+
+	@z1 : 10;
+	@z2 : 20;
+	@z3 : 30;
+	@z4 : 40;
+	@z5 : 50;
+	@z6 : 60; // Não usar a toa
+	@z7 : 70; // Não usar a menos que REALMENTE precise
+
+// MIXINS
+
+// USAR ATRELADO COM Z-INDEX QUANDO PRECISO (https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d) 
+.box-shadow(@level: 1){
+    & when (@level = 1) {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+    }
+    & when (@level = 2) {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    & when (@level = 3) {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    & when (@level = 4) {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    & when (@level = 5) {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
+
+.regular { font-family: 'pt'; font-weight: regular;}
+.bold { font-family: 'pt'; font-weight: bold;}
+.transition { transition: all .2s ease;}
+.hidden { display: none !important; visibility: hidden; }
+
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto;}
+.invisible { visibility: hidden;}
+
+.clearfix:before,
+.clearfix:after { content: ""; display: table;}
+
+.clearfix:after { clear: both;}
+
+.button { outline: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
