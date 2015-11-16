@@ -11,9 +11,25 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
                 otherwise({redirectTo: '/chicorita'});
 }]);
 
+hortalizeStatus.factory('bluetooth', function() {
+    var bluetoothSerial = cordova.require('bluetoothSerial');
+    return {
+		btStatus: function() {        
+		   	bluetoothSerial.available(function(success, failure){
+				if(success){
+					alert("Bluetooth workou");
+				}
+				else{
+					alert("Bluetooth falhou");
+				}
+			});
+        }
+    };
+});
+
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope, $resource){
+hortalizeStatus.controller('chicoritaController', function($scope, $resource, bluetooth){
 	$scope.tab = 1;
 	
 	$scope.statsInfo = [
@@ -25,26 +41,3 @@ hortalizeStatus.controller('chicoritaController', function($scope, $resource){
 		{ id: 'temp', unit: '%', info: '50'},
 	];
 });
-
-hortalizeStatus.controller('cocoController', function($scope, $resource){
-	$scope.tab = 2;
-	
-	$scope.statsInfo = [
-		{ id: 'temp', unit: 'ºC', info: '22', type: 'Temperatura'},
-		{ id: 'level', unit: '%', info: '80', type: 'Umidade do Solo'},	
-	];
-
-	$scope.humityLevel = [
-		{ id: 'temp', unit: '%', info: '20'},
-	];
-
-});
-
-
-
-
-
-
-
-
-
