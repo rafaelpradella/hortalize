@@ -1,6 +1,6 @@
 // Angular Module
 
-var hortalizeStatus = angular.module('hortalizeStatus', ['ngRoute','ngResource','ngCordova.plugins.bluetoothSerial']);
+var hortalizeStatus = angular.module('hortalizeStatus', ['ngRoute','ngResource','ngCordova']);
 
 hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -8,32 +8,33 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 		otherwise({redirectTo: '/chicorita'});
 }]);
 
-document.addEventListener("deviceready", function () {
-	$cordovaBluetoothSerial.available()
-	.then(
-	  function (error) {
-		alert("seu bluetooth está ligado?");
-	  },
-	  function (data) { 
-		$location.path('#/start');
-		getInfo();
-	});
-}, false);
-
-function getInfo(){
-	$cordovaBluetoothSerial.subscribe("/n")
-		.then(
-		function (error) {
-			alert("sem conexão com a Hortalize");
-		},
-		function (data) { 
-			alert(data);
-	});
-}
-
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope){
+hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial){
+	document.addEventListener("deviceready", function () {
+		$cordovaBluetoothSerial.available().then(
+			function (result) {
+				$location.path('#/start');
+				getInfo();
+			},
+			function (err) {
+				alert("seu bluetooth está ligado?");
+			}
+		);
+	}, false);
+
+	function getInfo(){
+		$cordovaBluetoothSerial.subscribe('\r').then(
+			function (result) {
+				alert(result);
+				$scope.infoBt = result;
+			},
+			function (err) {
+				alert("sem conexão com a Hortalize");
+			}
+		);
+	}
+
 	$scope.tab = 1;
 	$scope.statsInfo = [
 		{ id: 'temp', unit: 'ºC', info: '32', type: 'Temperatura'},
@@ -42,4 +43,5 @@ hortalizeStatus.controller('chicoritaController', function($scope){
 	$scope.humityLevel = [
 		{ id: 'temp', unit: '%', info: '50'},
 	];
+	
 });
