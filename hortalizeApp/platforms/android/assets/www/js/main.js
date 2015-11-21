@@ -3,25 +3,45 @@
 var hortalizeStatus = angular.module('hortalizeStatus', ['ngRoute','ngResource','ngCordova']);
 
 hortalizeStatus.config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-                when('/chicorita', {templateUrl: 'home.html', controller: 'chicoritaController'}).
-                otherwise({redirectTo: '/chicorita'});
+	$routeProvider.
+		when('/chicorita', {templateUrl: 'home.html', controller: 'chicoritaController'}).
+		otherwise({redirectTo: '/chicorita'});
 }]);
-
-document.addEventListener("deviceready", function () {
-}, false);
 
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope){
+hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial){
+	document.addEventListener("deviceready", function () {
+		$cordovaBluetoothSerial.available().then(
+			function (result) {
+				$location.path('#/start');
+				getInfo();
+			},
+			function (err) {
+				alert("seu bluetooth está ligado?");
+			}
+		);
+	}, false);
+
+	function getInfo(){
+		$cordovaBluetoothSerial.subscribe('\r').then(
+			function (result) {
+				alert(result);
+				$scope.infoBt = result;
+			},
+			function (err) {
+				alert("sem conexão com a Hortalize");
+			}
+		);
+	}
+
 	$scope.tab = 1;
-	
 	$scope.statsInfo = [
 		{ id: 'temp', unit: 'ºC', info: '32', type: 'Temperatura'},
-		{ id: 'level', unit: '%', info: '75', type: 'Umidade do Solo'},	
+		{ id: 'level', unit: '%', info: '75', type: 'Umidade do Solo'}, 
 	];
-
 	$scope.humityLevel = [
 		{ id: 'temp', unit: '%', info: '50'},
 	];
+	
 });
