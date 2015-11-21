@@ -10,7 +10,7 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial){
+hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial, $location){
 	document.addEventListener("deviceready", function () {
 		$cordovaBluetoothSerial.available().then(
 			function (result) {
