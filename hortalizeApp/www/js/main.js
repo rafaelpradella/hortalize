@@ -11,15 +11,14 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 // Angular Controllers
 
 hortalizeStatus.controller('chicoritaController', function($scope, $log, $cordovaBluetoothSerial, $location){
-	document.addEventListener('deviceready', function () {
-		$cordovaBluetoothSerial.available().then(
-			function (result) {
-				$location.path('#/start');
-				getInfo();
-			},
-			function (err) {
-				$log.info('seu bluetooth está ligado?');
-			}
+	/*document.addEventListener('deviceready', function () {
+		$cordovaBluetoothSerial.isConnected(
+		    function() {
+		        getInfo();
+		    },
+		    function() {
+		        console.log("Bluetooth is *not* connected");
+		    }
 		);
 	}, false);
 
@@ -33,24 +32,24 @@ hortalizeStatus.controller('chicoritaController', function($scope, $log, $cordov
 				$log.error('sem conexão com a Hortalize');
 			}
 		);
-	}
+	}*/
+
+	$scope.receivedBT = "75//76.00//19.00//90/n";
+	$scope.splitBT = $scope.receivedBT.split("//");
+	$scope.waterLevel = Math.round($scope.splitBT[0]);
+	$scope.airHumidity = Math.round($scope.splitBT[1]);
+	$scope.temperature = Math.round($scope.splitBT[2]);
+	$scope.soilHumidity = Math.round($scope.splitBT[3].replace("/n", ""));
+	console.log($scope.soilHumidity);
 
 	$scope.tab = 1;
 	$scope.statsInfo = [
-		{ id: 'temp', unit: 'ºC', info: '32', type: 'Temperatura'},
-		{ id: 'level', unit: '%', info: '75', type: 'Umidade do Solo'}, 
+		{ id: 'temp', unit: 'ºC', info: $scope.temperature, type: 'Temperatura'},
+		{ id: 'level', unit: '%', info: $scope.waterLevel, type: 'Umidade do Solo'},
 	];
 	$scope.humityLevel = [
-		{ id: 'temp', unit: '%', info: '50'},
+		{ id: 'temp', unit: '%', info: $scope.soilHumidity},
 	];
-	/*$scope.crops = [
-		{ name: 'Alface', slug: 'alface'},
-		{ name: 'Manjericão', slug: 'manjeiricao'},
-		{ name: 'Morango', slug: 'morango'},
-		{ name: 'Cebolinha', slug: 'cebolinha'},
-		{ name: 'Tomate Cereja', slug: 'tomate-cereja'},
-		{ name: 'Hortelã', slug: 'hortela'},
-	];*/
 
 	$('.js-add-crop').on('click', function (){
 		$(this).addClass('adding');
