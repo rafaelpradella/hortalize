@@ -1,0 +1,12 @@
+body {background-image: url("../img/bg_photo.jpg"); background-color: @white; background-position: center 40%; background-repeat: no-repeat; background-size: auto 50%;}
+ .crops-container { width: 100%; height: 250px; z-index: 1; position: absolute; bottom: 205px; text-align: center; -webkit-align-items: flex-end; display: flex; align-items: flex-end;
+ 	&:before { .bold; border-bottom: 1px solid fade(@darkGray,5%); content: "Adicione um cultivo"; color: @green; display: inline-block; letter-spacing: 1px; margin: 0 5%; padding: 5px 30px; text-transform: uppercase; width: 90%; position: absolute; top: 30px;}
+ 	.crop-cta { display: inline-block; width: 28%; margin: 0 1.5% 100px 1.5%;
+ 		&:active {
+ 			.crop-icon { background-color: @green; box-shadow: none; color: @white;}
+ 		}
+ 	}
+ 	.crop-icon { .bold; background-color: fade(@green, 0%); border-radius: 70px; border: 6px solid @green; .box-shadow(@level: 1); color: @green; display: inline-block; font-size: 50px; .transition; width: 70px; height: 70px;
+ 		&.menu-active { }
+ 	}
+ }

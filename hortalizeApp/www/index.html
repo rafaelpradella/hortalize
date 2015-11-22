@@ -27,8 +27,13 @@
         <!-- INLINED VIEWS -->
 
         <script type="text/ng-template" id="home.html">
+        <div class="crops-container">
+            <a class="crop-cta"><span class="crop-icon">+</span></a>
+            <a class="crop-cta"><span class="crop-icon">+</span></a>
+            <a class="crop-cta"><span class="crop-icon">+</span></a>
+        </div>
         <footer class="soil-container">
-            <div class="soil-info">
+            <div class="soil-info footer-block hidden">
                 <div class="soil-info-container" data-ng-repeat="stat in statsInfo">
                     <span class="soil-info-type">{{stat.type}}</span>
                     <span class="soil-info-value">{{stat.info}}
@@ -36,9 +41,12 @@
                     </span>
                 </div>
                 <div class="soil-reservatory js-reserv" data-ng-repeat="perc in humityLevel">
-                    <span class="soil-reservatory-level" style="height: {{perc.info}}%;"></span>
+                    <span class="soil-reservatory-level" style="height: {{perc.info}}%; max-height: 100%;"></span>
                 </div>
             </div>
+            <ul class="crop-item-list footer-block ">
+                <li data-ng-repeat="item in crops | orderBy:'toString()'" class="crop-item"><span class="crop-{{item.slug}} crop"></span>{{item.name}}</li>
+            </ul>
         </footer>
         </script>
         <!-- THE END -->
