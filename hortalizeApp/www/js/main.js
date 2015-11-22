@@ -62,7 +62,7 @@ hortalizeStatus.controller('chicoritaController', function($scope, $log, $cordov
 
 	$('.crop-item').on('click', function(){
 		var selectedCrop = $('.crop').attr('class');
-		$('.adding').addClass(selectedCrop);
+		$('.adding').addClass(selectedCrop + " js-crop-info crop-info");
 		$('body').attr('id', ' ');
 		$('.adding').removeClass('adding');
 	});

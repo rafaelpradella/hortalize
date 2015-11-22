@@ -195,6 +195,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/crop\/manjeiricao.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12555,
+		"inputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
+		"outputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/hortela.png": {
 		"fileType": 32768,
 		"ignore": 0,
