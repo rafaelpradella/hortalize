@@ -199,6 +199,24 @@ body {
   box-shadow: none;
   color: #FFFFFF;
 }
+.crops-container .crop-cta:active .crop-icon.tomate-cereja {
+  background-image: url("../img/tomate-cereja.png");
+}
+.crops-container .crop-cta:active .crop-icon.hortela {
+  background-image: url("../img/hortela.png");
+}
+.crops-container .crop-cta:active .crop-icon.morango {
+  background-image: url("../img/morango.png");
+}
+.crops-container .crop-cta:active .crop-icon.alface {
+  background-image: url("../img/alface.png");
+}
+.crops-container .crop-cta:active .crop-icon.cebolinha {
+  background-image: url("../img/cebolinha.png");
+}
+.crops-container .crop-cta:active .crop-icon.manjeiricao {
+  background-image: url("../img/manjeiricao.png");
+}
 .crops-container .crop-icon {
   font-family: 'pt';
   font-weight: bold;
@@ -234,7 +252,7 @@ body {
 }
 .soil-container .soil-info-container {
   float: left;
-  padding-top: 75px;
+  padding-top: 15px;
   text-align: center;
   width: 49%;
 }
@@ -284,28 +302,32 @@ body {
   width: 100%;
   height: 100%;
 }
-.crop-item-list {
+#cropList .crop-item-list {
   background-color: #FFFFFF;
-  height: calc(80%);
+  height: 100%;
+  margin-top: 0;
+  margin-left: 10px;
   overflow-y: auto;
   padding: 0;
 }
-.crop-item-list .crop-item {
+#cropList .crop-item-list .crop-item {
   font-family: 'pt';
   font-weight: bold;
   border-bottom: 1px solid #F6F6F6;
   color: #5B9E29;
+  display: inline-block;
   font-size: 16px;
   padding: 10px;
+  width: 100%;
 }
-.crop-item-list .crop-item:hover {
+#cropList .crop-item-list .crop-item:hover {
   background-color: #e7f7c1;
   color: #3A661A;
 }
-.crop-item-list .crop-item:hover .crop {
+#cropList .crop-item-list .crop-item:hover .crop {
   opacity: .5;
 }
-.crop-item-list .crop {
+#cropList .crop-item-list .crop {
   background-color: #5B9E29;
   background-size: 120% auto;
   border-bottom: 2px solid rgba(108, 108, 108, 0.1);
@@ -314,21 +336,34 @@ body {
   height: 43px;
   margin: -10px 10px -18px 3px;
 }
-.crop-item-list .crop.crop-tomate-cereja {
+#cropList .crop-item-list .crop.tomate-cereja {
   background-image: url("../img/tomate-cereja.png");
 }
-.crop-item-list .crop.crop-hortela {
+#cropList .crop-item-list .crop.hortela {
   background-image: url("../img/hortela.png");
 }
-.crop-item-list .crop.crop-morango {
+#cropList .crop-item-list .crop.morango {
   background-image: url("../img/morango.png");
 }
-.crop-item-list .crop.crop-alface {
+#cropList .crop-item-list .crop.alface {
   background-image: url("../img/alface.png");
 }
-.crop-item-list .crop.crop-cebolinha {
+#cropList .crop-item-list .crop.cebolinha {
   background-image: url("../img/cebolinha.png");
 }
-.crop-item-list .crop.crop-manjeiricao {
+#cropList .crop-item-list .crop.manjeiricao {
   background-image: url("../img/manjeiricao.png");
+}
+#cropList .adding {
+  transform: translateY(250%);
+  transition: all .5s ease;
+  z-index: -1;
+}
+#cropList .soil-info {
+  display: none !important;
+  visibility: hidden;
+}
+#cropList .crop-item-list {
+  visibility: visible!important;
+  display: inline-block !important;
 }

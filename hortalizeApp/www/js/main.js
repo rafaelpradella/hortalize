@@ -10,15 +10,15 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial, $location){
-	document.addEventListener("deviceready", function () {
+hortalizeStatus.controller('chicoritaController', function($scope, $log, $cordovaBluetoothSerial, $location){
+	document.addEventListener('deviceready', function () {
 		$cordovaBluetoothSerial.available().then(
 			function (result) {
 				$location.path('#/start');
 				getInfo();
 			},
 			function (err) {
-				alert("seu bluetooth está ligado?");
+				$log.info('seu bluetooth está ligado?');
 			}
 		);
 	}, false);
@@ -26,11 +26,11 @@ hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluet
 	function getInfo(){
 		$cordovaBluetoothSerial.subscribe('\r').then(
 			function (result) {
-				alert(result);
+				$log.info(result);
 				$scope.infoBt = result;
 			},
 			function (err) {
-				alert("sem conexão com a Hortalize");
+				$log.error('sem conexão com a Hortalize');
 			}
 		);
 	}
@@ -43,12 +43,27 @@ hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluet
 	$scope.humityLevel = [
 		{ id: 'temp', unit: '%', info: '50'},
 	];
-	$scope.crops = [
-		{ name: "Alface", slug: "alface"},
-		{ name: "Manjericão", slug: "manjeiricao"},
-		{ name: "Morango", slug: "morango"},
-		{ name: "Cebolinha", slug: "cebolinha"},
-		{ name: "Tomate Cereja", slug: "tomate-cereja"},
-		{ name: "Hortelã", slug: "hortela"},
-	];
+	/*$scope.crops = [
+		{ name: 'Alface', slug: 'alface'},
+		{ name: 'Manjericão', slug: 'manjeiricao'},
+		{ name: 'Morango', slug: 'morango'},
+		{ name: 'Cebolinha', slug: 'cebolinha'},
+		{ name: 'Tomate Cereja', slug: 'tomate-cereja'},
+		{ name: 'Hortelã', slug: 'hortela'},
+	];*/
+
+	$('.js-add-crop').on('click', function (){
+		$(this).addClass('adding');
+		$('body').removeAttr('id');
+		$('body').attr('id', 'cropList');
+		$(this).off('click');
+		$(this).removeClass('js-add-crop');
+	});
+
+	$('.crop-item').on('click', function(){
+		var selectedCrop = $('.crop').attr('class');
+		$('.adding').addClass(selectedCrop);
+		$('body').attr('id', ' ');
+		$('.adding').removeClass('adding');
+	});
 });

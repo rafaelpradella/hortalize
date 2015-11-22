@@ -43,5 +43,12 @@ hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluet
 	$scope.humityLevel = [
 		{ id: 'temp', unit: '%', info: '50'},
 	];
-	
+	$scope.crops = [
+		{ name: "Alface", slug: "alface"},
+		{ name: "Manjericão", slug: "manjeiricao"},
+		{ name: "Morango", slug: "morango"},
+		{ name: "Cebolinha", slug: "cebolinha"},
+		{ name: "Tomate Cereja", slug: "tomate-cereja"},
+		{ name: "Hortelã", slug: "hortela"},
+	];
 });
