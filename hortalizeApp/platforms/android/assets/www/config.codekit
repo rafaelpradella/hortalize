@@ -131,6 +131,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/css\/less\/states\/crop-list.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/less\/states\/crop-list.less",
+		"outputAbbreviatedPath": "\/css\/less\/css\/crop-list.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/img\/alface.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -175,6 +195,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/crop\/manjeiricao.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12555,
+		"inputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
+		"outputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/hortela.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -208,6 +239,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/Temperatura.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2037,
+		"inputAbbreviatedPath": "\/img\/Temperatura.png",
+		"outputAbbreviatedPath": "\/img\/Temperatura.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/tomate-cereja.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -215,6 +257,17 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/tomate-cereja.png",
 		"outputAbbreviatedPath": "\/img\/tomate-cereja.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/Umidade do Solo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2763,
+		"inputAbbreviatedPath": "\/img\/Umidade do Solo.png",
+		"outputAbbreviatedPath": "\/img\/Umidade do Solo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

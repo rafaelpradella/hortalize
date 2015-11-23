@@ -1,6 +1,6 @@
 // Angular Module
 
-var hortalizeStatus = angular.module('hortalizeStatus', ['ngRoute','ngResource','ngCordova']);
+var hortalizeStatus = angular.module('hortalizeStatus', ['ngRoute','ngResource']);
 
 hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -10,28 +10,25 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope, $log, $cordovaBluetoothSerial, $location){
-	/*document.addEventListener('deviceready', function () {
-		$cordovaBluetoothSerial.isConnected(
+hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial, $location){
+	/*$cordovaBluetoothSerial.isConnected(
 		    function() {
+		    	$('.viewBox').text('Bluetooth funcionou!');
 		        getInfo();
 		    },
 		    function() {
-		        console.log("Bluetooth is *not* connected");
+		        $('.viewBox').text("Bluetooth is *not* connected");
 		    }
 		);
-	}, false);
-
 	function getInfo(){
-		$cordovaBluetoothSerial.subscribe('\r').then(
-			function (result) {
-				$log.info(result);
-				$scope.infoBt = result;
-			},
-			function (err) {
-				$log.error('sem conexão com a Hortalize');
-			}
-		);
+		$cordovaBluetoothSerial.subscribe('\n',
+			function (data) {
+            	$('.viewBox').text(data);
+        	},
+	        function() {
+		        $('.viewBox').text("Confirme a sua conexão com sua Hortalize");
+		    }
+	    );
 	}*/
 
 	$scope.receivedBT = "75//76.00//19.00//90/n";

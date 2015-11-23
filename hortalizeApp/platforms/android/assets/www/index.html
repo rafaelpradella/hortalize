@@ -15,39 +15,46 @@
                 <div class="tbar-view">
                     <span class="tbar-view-possessive">Sua</span>
                     <div class="tbar-view-selector">
-                        <a href="#/chicorita" data-ng-click="tab=1" data-ng-class="{'active-item' : tab==1}" class="tbar-view-item">Chicorita</a>
+                        <a href="#/control" data-ng-click="tab=1" data-ng-class="{'active-item' : tab==1}" class="tbar-view-item">Chicorita</a>
                     </div>
+                    <a href="#/nova" class="tbar-new">+</a>
                 </div>
             </header>
             <article class="viewBox">
                 <div ng-view>
                 </div>
-            </article> 
+            </article>
 
         <!-- INLINED VIEWS -->
 
         <script type="text/ng-template" id="home.html">
-        <div class="crops-container">
-            <a class="crop-cta"><span class="crop-icon">+</span></a>
-            <a class="crop-cta"><span class="crop-icon">+</span></a>
-            <a class="crop-cta"><span class="crop-icon">+</span></a>
-        </div>
-        <footer class="soil-container">
-            <div class="soil-info footer-block hidden">
-                <div class="soil-info-container" data-ng-repeat="stat in statsInfo">
-                    <span class="soil-info-type">{{stat.type}}</span>
-                    <span class="soil-info-value">{{stat.info}}
-                        <small>{{stat.unit}}</small>
-                    </span>
-                </div>
-                <div class="soil-reservatory js-reserv" data-ng-repeat="perc in humityLevel">
-                    <span class="soil-reservatory-level" style="height: {{perc.info}}%; max-height: 100%;"></span>
-                </div>
+            <div class="crops-container">
+                <a class="crop-cta js-add-crop"><span class="crop-icon">+</span></a>
+                <a class="crop-cta js-add-crop"><span class="crop-icon">+</span></a>
+                <a class="crop-cta js-add-crop"><span class="crop-icon">+</span></a>
             </div>
-            <ul class="crop-item-list footer-block ">
-                <li data-ng-repeat="item in crops | orderBy:'toString()'" class="crop-item"><span class="crop-{{item.slug}} crop"></span>{{item.name}}</li>
-            </ul>
-        </footer>
+            <footer class="soil-container">
+                <div  class="soil-info footer-block">
+                    <div class="soil-info-container" data-ng-repeat="stat in statsInfo">
+                        <img src="img/{{stat.type}}.png" alt="{{stat.type}}" />
+                        <span class="soil-info-type">{{stat.type}}</span>
+                        <span class="soil-info-value">{{stat.info}}
+                            <small>{{stat.unit}}</small>
+                        </span>
+                    </div>
+                    <div class="soil-reservatory js-reserv" data-ng-repeat="perc in humityLevel">
+                        <span class="soil-reservatory-level" style="height: {{perc.info}}%; max-height: 100%;"></span>
+                    </div>
+                </div>
+                <div class="crop-item-list footer-block hidden">
+                    <a class="crop-item js-choose-crop"><span class="alface crop"></span>Alface</a>
+                    <a class="crop-item js-choose-crop"><span class="cebolinha crop"></span>Cebolinha</a>
+                    <a class="crop-item js-choose-crop"><span class="hortela crop"></span>Hortelã</a>
+                    <a class="crop-item js-choose-crop"><span class="manjeiricao crop"></span>Manjeiricão</a>
+                    <a class="crop-item js-choose-crop"><span class="morango crop"></span>Morango</a>
+                    <a class="crop-item js-choose-crop"><span class="tomate-cereja crop"></span>Tomate Cereja</a>
+                </div>
+            </footer>
         </script>
         <!-- THE END -->
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
