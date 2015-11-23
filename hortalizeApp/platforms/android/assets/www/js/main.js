@@ -10,26 +10,7 @@ hortalizeStatus.config(['$routeProvider', function($routeProvider) {
 
 // Angular Controllers
 
-hortalizeStatus.controller('chicoritaController', function($scope, $cordovaBluetoothSerial, $location){
-	/*$cordovaBluetoothSerial.isConnected(
-		    function() {
-		    	$('.viewBox').text('Bluetooth funcionou!');
-		        getInfo();
-		    },
-		    function() {
-		        $('.viewBox').text("Bluetooth is *not* connected");
-		    }
-		);
-	function getInfo(){
-		$cordovaBluetoothSerial.subscribe('\n',
-			function (data) {
-            	$('.viewBox').text(data);
-        	},
-	        function() {
-		        $('.viewBox').text("Confirme a sua conexão com sua Hortalize");
-		    }
-	    );
-	}*/
+hortalizeStatus.controller('chicoritaController', function($scope, $location){
 
 	$scope.receivedBT = "75//76.00//19.00//90/n";
 	$scope.splitBT = $scope.receivedBT.split("//");
