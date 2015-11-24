@@ -38,10 +38,9 @@ hortalizeStatus.controller('chicoritaController', function($scope){
 	});
 
 	$('.crop-item').on('click', function(){
-		var selectedCrop = $('.crop').attr('class');
+		var selectedCrop = $(this).children().attr('class');
 		$('.adding').addClass(selectedCrop + " js-crop-info crop-info");
-		$('body').attr('id', ' ');
-		$('.crops-container::before').hide();
+		$('body').attr('id', 'addedCrop');
 		$('.adding').removeClass('adding');
 	});
 });

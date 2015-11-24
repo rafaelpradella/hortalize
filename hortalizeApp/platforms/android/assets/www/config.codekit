@@ -204,6 +204,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/bg_setup.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19077,
+		"inputAbbreviatedPath": "\/img\/bg_setup.jpg",
+		"outputAbbreviatedPath": "\/img\/bg_setup.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cebolinha.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -215,6 +226,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/crop\/alface.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5980,
+		"inputAbbreviatedPath": "\/img\/crop\/alface.png",
+		"outputAbbreviatedPath": "\/img\/crop\/alface.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/crop\/cebolinha.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19919,
+		"inputAbbreviatedPath": "\/img\/crop\/cebolinha.png",
+		"outputAbbreviatedPath": "\/img\/crop\/cebolinha.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/crop\/manjeiricao.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -222,6 +255,17 @@
 		"initialSize": 12555,
 		"inputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
 		"outputAbbreviatedPath": "\/img\/crop\/manjeiricao.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/crop\/tomate-cereja.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11682,
+		"inputAbbreviatedPath": "\/img\/crop\/tomate-cereja.png",
+		"outputAbbreviatedPath": "\/img\/crop\/tomate-cereja.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -440,6 +484,17 @@
 		"initialSize": 78744,
 		"inputAbbreviatedPath": "\/res\/screen\/android\/splash-port-xhdpi.png",
 		"outputAbbreviatedPath": "\/res\/screen\/android\/splash-port-xhdpi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/res\/screen\/icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58729,
+		"inputAbbreviatedPath": "\/res\/screen\/icon.png",
+		"outputAbbreviatedPath": "\/res\/screen\/icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
