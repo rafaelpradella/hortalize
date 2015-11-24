@@ -79,4 +79,7 @@
 .clearfix:after { clear: both;}
 
 .button { outline: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-
+.button-cta { .button; .bold; border: 5px solid #ffffff; color: #ffffff!important; font-size: 15px; display: inline-block; padding: 8px 20px; background-color: @green; text-transform: uppercase; margin: 40px auto;
+    &:hover { color: #FFFFFF;}
+    &:active { background-color: darken(@lightGreen, 10%)}
+}

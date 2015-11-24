@@ -65,6 +65,32 @@
   -ms-user-select: none;
   user-select: none;
 }
+.button-cta {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'pt';
+  font-weight: bold;
+  border: 5px solid #ffffff;
+  color: #ffffff!important;
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #5B9E29;
+  text-transform: uppercase;
+  margin: 40px auto;
+}
+.button-cta:hover {
+  color: #FFFFFF;
+}
+.button-cta:active {
+  background-color: #bae950;
+}
 html,
 button,
 input,
@@ -138,7 +164,8 @@ p {
   display: block;
   padding: 20px;
   width: 100%;
-  height: 110px;
+  height: 120px;
+  transition: all .2s ease;
   z-index: 30;
 }
 .tbar .tbar-new {
@@ -154,8 +181,7 @@ p {
   font-weight: bold;
   display: inline-block;
   font-size: 2.5em;
-  margin-top: 39px;
-  width: 80%;
+  width: 100%;
 }
 .tbar .tbar-view-selector {
   display: inline-block;
@@ -163,6 +189,10 @@ p {
 .tbar .tbar-view-item {
   border-bottom: 5px solid #323232;
   color: #323232;
+}
+.tbar .tbar-logo {
+  display: block;
+  margin: -10px auto 10px;
 }
 body {
   background-image: url("../img/bg_photo.jpg");
@@ -385,4 +415,57 @@ body {
 #cropList .crop-item-list {
   visibility: visible!important;
   display: inline-block !important;
+}
+#setup {
+  background-image: none;
+}
+#setup .tbar {
+  width: 100%;
+  height: 170px;
+}
+#setup .tbar .tbar-view {
+  margin-top: 45px;
+}
+#setup .tbar .tbar-view-item {
+  display: none !important;
+  visibility: hidden;
+}
+#setup .tbar .tbar-view-input {
+  background-color: transparent;
+  font-family: 'pt';
+  font-weight: bold;
+  border: none;
+  border-bottom: 5px solid #323232;
+  color: #323232;
+  display: inline-block !important;
+  font-size: 38px;
+  text-align: left;
+  visibility: visible!important;
+  width: 250px;
+}
+#setup .tbar .tbar-view-input:focus {
+  outline: 1px rgba(50, 50, 50, 0.1);
+}
+#setup .tbar .tbar-view-input::-webkit-input-placeholder {
+  color: #6C6C6C;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  padding-top: 20px;
+}
+#setup .naming-title {
+  font-size: 14px;
+  color: #3A661A;
+  letter-spacing: 1px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+#setup .naming-dialog {
+  width: 100%;
+  text-align: center;
 }
