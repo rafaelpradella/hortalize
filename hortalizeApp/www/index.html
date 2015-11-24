@@ -42,8 +42,12 @@
                             <small>{{stat.unit}}</small>
                         </span>
                     </div>
-                    <div class="soil-reservatory js-reserv" data-ng-repeat="perc in humityLevel">
+                    <div class="soil-reservatory" data-ng-repeat="perc in humityLevel" ng-class="{'active': isActive}" ng-click="activeButton()">
                         <span class="soil-reservatory-level" style="height: {{perc.info}}%; max-height: 100%;"></span>
+                         <span class="soil-reservatory-days">
+                            {{perc.daysLeft}}
+                            <small>dias até a próxima rega</small>
+                        </span>
                     </div>
                 </div>
                 <div class="crop-item-list footer-block hidden">
@@ -53,6 +57,10 @@
                     <a class="crop-item js-choose-crop"><span class="manjeiricao crop"></span>Manjeiricão</a>
                     <a class="crop-item js-choose-crop"><span class="morango crop"></span>Morango</a>
                     <a class="crop-item js-choose-crop"><span class="tomate-cereja crop"></span>Tomate Cereja</a>
+                </div>
+                <div data-ng-repeat="crop in cropInfo" id="{{crop.id}}" class="crop-info-block footer-block hidden">
+                    <h3>{{crop.nome}}</h3>
+                    <p>{{crop.info}}</p>
                 </div>
             </footer>
         </script>

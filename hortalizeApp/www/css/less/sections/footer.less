@@ -10,9 +10,17 @@
 	.soil-info-value { color: @white; font-size: 80px; letter-spacing: -4.5px; line-height: 110%; margin-left: -25px; position: relative;
 		small { font-size: 20px; letter-spacing: -1.25px; position: absolute; top: -15px; right: -20px;}
 	}
-
-	.soil-reservatory { background-color: @lightBlue; display:flex; justify-content:center; align-items:flex-end; padding: 2px; position: absolute; top: 0px; right: 0; width: 20px; height: 100%;}
+	.soil-reservatory-days { opacity: 0; font-size: 0;}
 	.soil-reservatory-level { background-color: @blue; display: inline-block; width: 100%; height: 100%;}
+	.soil-reservatory { background-color: @lightBlue; display:flex; justify-content:center; align-items:flex-end; padding: 2px; position: absolute; top: 0px; right: 0; width: 20px; height: 100%; .transition;
+
+		&.active { width: 54%;
+			.soil-reservatory-level { -webkit-animation: 1s variate infinite alternate ease;}
+			.soil-reservatory-days { color: darken(@blue,45%); .regular; font-size: 130px; line-height: 25%; opacity: 1; position: absolute; left: 50%; margin-left: -70px; top: 90px;
+				small {font-size: 14px; .bold; display: inline-block;}
+			}
+		}
+	}
 }
 
 .crop-info { background-image: url("../img/crop/manjeiricao.png"); background-size: 100px auto; margin-bottom: 0!important; min-height: 110px; background-repeat: no-repeat;
