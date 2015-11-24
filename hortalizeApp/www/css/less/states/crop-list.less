@@ -14,9 +14,14 @@
 			&.manjeiricao { background-image: url("../img/manjeiricao.png")}
 		}
 	}
+	.crops-container:before { content: "Escolha um cultivo na lista";}
 	.adding { transform: translateY(180%); transition: all .5s ease; z-index: -1;}
 
 	// VIEW TRIGGER
 	.soil-info { .hidden;}
 	.crop-item-list { visibility: visible!important; display: inline-block!important;}
+}
+
+#addedCrop {
+	.crops-container:before { content: "Toque no cultivo para mais informação"; font-size: 12px;}
 }

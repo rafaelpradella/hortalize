@@ -19,7 +19,7 @@
 // VARIABLES
 	@darkGray : #323232;
     @gray: #6C6C6C;
-	@lightGray : #F6F6F6;
+	@lightGray : #F9F9F9;
 	@white : #FFFFFF;
 
     @lightGreen:#CCEF7D;
@@ -79,7 +79,7 @@
 .clearfix:after { clear: both;}
 
 .button { outline: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-.button-cta { .button; .bold; border: 5px solid #ffffff; color: #ffffff!important; font-size: 15px; display: inline-block; padding: 8px 20px; background-color: @green; text-transform: uppercase; margin: 40px auto;
+.button-cta { .button; .box-shadow(2); border-radius: 2px; .bold; border: 2px solid #ffffff; color: #ffffff!important; font-size: 15px; display: inline-block; padding: 8px 20px; background-color: darken(@blue,10%); text-transform: uppercase; margin: 40px auto;
     &:hover { color: #FFFFFF;}
-    &:active { background-color: darken(@lightGreen, 10%)}
+    &:active { background-color: lightBlue; box-shadow: none; transform: translateY(2px);}
 }
